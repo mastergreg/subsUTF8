@@ -32,4 +32,28 @@ def convert(pathIn,pathOut):
   f.close()
 
 def printUsage():
-  print "Usage: +
+  print "Usage: subsUTF8.py fileIn.srt (optional fileOut.srt)"
+
+
+def main():
+  if len(sys.argv)==2:
+    pathIn = sys.argv[1]
+    pathOut = sys.argv[1][:-4]+"_converted_.srt"
+    convert(pathIn,pathOut)
+  elif len(sys.argv)==3:
+    pathIn = sys.argv[1]
+    pathOut = sys.argv[2]
+    convert(pathIn,pathOut)
+  else:
+    printUsage()
+    return 1
+
+
+  
+
+
+
+
+
+if __name__=="__main__":
+  main()
