@@ -7,7 +7,7 @@
 #
 #* Creation Date : 02-10-2011
 #
-#* Last Modified : Sun 02 Oct 2011 02:17:46 AM EEST
+#* Last Modified : Fri 26 Oct 2012 04:45:40 PM EEST
 #
 #* Created By : Greg Liras <gregliras@gmail.com>
 #
@@ -38,7 +38,7 @@ def printUsage():
 def main():
   if len(sys.argv)==2:
     pathIn = sys.argv[1]
-    pathOut = sys.argv[1][:-4]+"_converted_.srt"
+    pathOut = "".join(sys.argv[1].split(".")[:-1])+"_converted_.srt"
     convert(pathIn,pathOut)
   elif len(sys.argv)==3:
     pathIn = sys.argv[1]
